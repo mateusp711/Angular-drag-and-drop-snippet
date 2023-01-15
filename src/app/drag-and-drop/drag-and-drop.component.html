@@ -1,0 +1,39 @@
+<div class="center">
+  <ngx-file-drop
+    accept="text/.csv"
+    [multiple]="false"
+    [directory]="false"
+    dropZoneClassName="drop-zone"
+    (onFileDrop)="dropped($event)"
+    (onFileOver)="fileOver($event)"
+    (onFileLeave)="fileLeave($event)"
+  >
+    <ng-template
+      ngx-file-drop-content-tmp
+      let-openFileSelector="openFileSelector"
+      ><div class="drop-zone">
+        <label for="">Arraste e solte arquivos</label>
+        <img src="/assets/upload.png" alt="upload-icon" />
+        <button mat-stroked-button (click)="openFileSelector()">
+          Procurar Arquivos
+        </button>
+      </div>
+    </ng-template>
+  </ngx-file-drop>
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>File name:</th>
+      </tr>
+    </thead>
+    <tbody class="upload-name-style">
+      <tr *ngFor="let item of files; let i = index">
+        <td>
+          {{ item.relativePath }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

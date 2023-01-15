@@ -1,0 +1,46 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(0, 0, 0, 0.12);
+  margin-top: 1rem;
+  height: 180px;
+}
+
+ngx-file-drop {
+  height: 100%;
+  width: 100%;
+}
+
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  label {
+    margin-top: 6rem;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+  img {
+    margin-top: 1rem;
+  }
+  button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.87);
+    text-transform: uppercase;
+  }
+}
+
+table {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2rem;
+}
