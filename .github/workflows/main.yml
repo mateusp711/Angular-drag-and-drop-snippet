@@ -55,10 +55,10 @@ jobs:
 
       - name: Add Tag
         run: |
-        git config user.name "${{ github.actor }}"
-        git config user.email "${{ github.actor }}@users.noreply.github.com"
-        git tag -a v2.0.0 -m "Version 2.0.0"
-        git push --follow-tags
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git tag -a v2.0.0 -m "Version 2.0.0"
+          git push --follow-tags
 
       - name: Archive dist folder
         uses: actions/upload-artifact@v3
